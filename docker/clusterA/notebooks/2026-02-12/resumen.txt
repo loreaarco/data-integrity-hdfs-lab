@@ -1,0 +1,12 @@
+--- RESUMEN DE INTEGRIDAD 2026-02-12 ---
+Fecha de escaneo: Thu Feb 12 21:25:35 UTC 2026
+--------------------------------
+Status: HEALTHY
+ Total blocks (validated):	9 (avg. block size 59100032 B)
+ Corrupt blocks:		0
+ Corrupt block groups:		0
+ Missing blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Missing block groups:		0
+ Missing internal blocks:	0
+ Under-replicated blocks:	0 (0.0 %)

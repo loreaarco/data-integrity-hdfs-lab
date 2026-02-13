@@ -1,0 +1,61 @@
+FSCK started by hdadmin (auth:SIMPLE) from /172.18.0.3 for path /data at Thu Feb 12 21:25:30 GMT 2026
+
+/data <dir>
+/data/iot <dir>
+/data/iot/raw <dir>
+/data/iot/raw/dt=2026-02-12 <dir>
+/data/iot/raw/dt=2026-02-12/iot_20260212.jsonl 448200591 bytes, replicated: replication=3, 7 block(s):  OK
+0. BP-109221184-172.18.0.3-1770927876379:blk_1073741842_1018 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.6:9866,DS-3c1b6180-9d4a-4b10-b402-fb834f026290,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK], DatanodeInfoWithStorage[172.18.0.5:9866,DS-b7d46fbd-c18d-47bb-8b19-55e28e44ecae,DISK]]
+1. BP-109221184-172.18.0.3-1770927876379:blk_1073741843_1019 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK], DatanodeInfoWithStorage[172.18.0.5:9866,DS-b7d46fbd-c18d-47bb-8b19-55e28e44ecae,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-e864dcdf-e231-42c9-9690-4066ec60b893,DISK]]
+2. BP-109221184-172.18.0.3-1770927876379:blk_1073741844_1020 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.7:9866,DS-e864dcdf-e231-42c9-9690-4066ec60b893,DISK], DatanodeInfoWithStorage[172.18.0.5:9866,DS-b7d46fbd-c18d-47bb-8b19-55e28e44ecae,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK]]
+3. BP-109221184-172.18.0.3-1770927876379:blk_1073741845_1021 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.7:9866,DS-e864dcdf-e231-42c9-9690-4066ec60b893,DISK], DatanodeInfoWithStorage[172.18.0.5:9866,DS-b7d46fbd-c18d-47bb-8b19-55e28e44ecae,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK]]
+4. BP-109221184-172.18.0.3-1770927876379:blk_1073741846_1022 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.6:9866,DS-3c1b6180-9d4a-4b10-b402-fb834f026290,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-e864dcdf-e231-42c9-9690-4066ec60b893,DISK]]
+5. BP-109221184-172.18.0.3-1770927876379:blk_1073741847_1023 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.5:9866,DS-b7d46fbd-c18d-47bb-8b19-55e28e44ecae,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-e864dcdf-e231-42c9-9690-4066ec60b893,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK]]
+6. BP-109221184-172.18.0.3-1770927876379:blk_1073741848_1024 len=45547407 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.7:9866,DS-e864dcdf-e231-42c9-9690-4066ec60b893,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK], DatanodeInfoWithStorage[172.18.0.5:9866,DS-b7d46fbd-c18d-47bb-8b19-55e28e44ecae,DISK]]
+
+/data/logs <dir>
+/data/logs/raw <dir>
+/data/logs/raw/dt=2026-02-12 <dir>
+/data/logs/raw/dt=2026-02-12/logs_20260212.log 83699697 bytes, replicated: replication=3, 2 block(s):  OK
+0. BP-109221184-172.18.0.3-1770927876379:blk_1073741840_1016 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.5:9866,DS-b7d46fbd-c18d-47bb-8b19-55e28e44ecae,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK], DatanodeInfoWithStorage[172.18.0.7:9866,DS-e864dcdf-e231-42c9-9690-4066ec60b893,DISK]]
+1. BP-109221184-172.18.0.3-1770927876379:blk_1073741841_1017 len=16590833 Live_repl=3  [DatanodeInfoWithStorage[172.18.0.6:9866,DS-3c1b6180-9d4a-4b10-b402-fb834f026290,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-b4d6c458-4607-469d-810b-596ce7bab58f,DISK], DatanodeInfoWithStorage[172.18.0.5:9866,DS-b7d46fbd-c18d-47bb-8b19-55e28e44ecae,DISK]]
+
+
+Status: HEALTHY
+ Number of data-nodes:	4
+ Number of racks:		1
+ Total dirs:			7
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	531900288 B
+ Total files:	2
+ Total blocks (validated):	9 (avg. block size 59100032 B)
+ Minimally replicated blocks:	9 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	3.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Thu Feb 12 21:25:30 GMT 2026 in 588 milliseconds
+
+
+The filesystem under path '/data' is HEALTHY
