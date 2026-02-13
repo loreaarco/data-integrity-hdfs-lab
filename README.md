@@ -1,49 +1,46 @@
-# DataSecure Lab — Integridad de Datos en Big Data (HDFS)
+#  Proyecto: Data Integrity & Disaster Recovery en HDFS
 
-Repositorio base del proyecto práctico **Integridad de Datos en Big Data** usando un ecosistema **Hadoop dockerizado** del aula.
 
--  Enunciado: `docs/enunciado_proyecto.md`
--  Rúbrica: `docs/rubric.md`
--  Pistas rápidas: `docs/pistas.md`
--  Entrega (individual): `docs/entrega.md`
--  Plantilla de evidencias: `docs/evidencias.md`
+------------------------------------------------------------------------
 
----
+#  Scripts del Proyecto
 
-## Quickstart (para corrección)
+## Fase 1: Preparación e Ingesta
+- bash 00_bootstrap.sh: 
+    Configura la estructura base de directorios en HDFS (/data, /backup, /audit).
 
-```bash
-cd docker/clusterA && docker compose up -d
-bash scripts/00_bootstrap.sh && bash scripts/10_generate_data.sh && bash scripts/20_ingest_hdfs.sh
-bash scripts/30_fsck_audit.sh && bash scripts/40_backup_copy.sh && bash scripts/50_inventory_compare.sh
-bash scripts/70_incident_simulation.sh && bash scripts/80_recovery_restore.sh
-```
+- bash 10_generate_data.sh: 
+    Genera localmente 3 millones de líneas de logs y datos IoT en formato JSONL.
 
-> Si algún script necesita variables:  
-> `DT=YYYY-MM-DD` (fecha) y `NN_CONTAINER=namenode` (nombre del contenedor NameNode).
+- bash 20_ingest_hdfs.sh: 
+    Sube los archivos generados al NameNode y los distribuye en HDFS.
 
----
+## Fase 2: Auditoría y Seguridad
+- bash 30_fsck_audit.sh: 
+    Realiza un chequeo de salud del sistema de archivos (hdfs fsck) y exporta reportes al volumen de Jupyter.
 
-## Servicios y UIs
-- NameNode UI: http://localhost:9870
-- ResourceManager UI: http://localhost:8088
-- Jupyter (NameNode): http://localhost:8889
+-bash 40_backup_copy.sh: 
+    Crea una copia de seguridad interna de los datos dentro de HDFS.
 
----
+-bash 50_inventory_compare.sh: 
+    Compara el inventario de la carpeta original frente al backup para validar la consistencia.
 
-## Estructura del repositorio
-- `docker/clusterA/`: docker-compose del aula (Cluster A)
-- `scripts/`: pipeline (generación → ingesta → auditoría → backup → incidente → recuperación)
-- `notebooks/`: análisis en Jupyter (tabla de auditorías y métricas)
-- `docs/`: documentación (enunciado, rúbrica, pistas, entrega, evidencias)
+## Fase 3: Resiliencia y Recuperación
+-bash 70_incident_simulation.sh: 
+    Simula un fallo deteniendo un contenedor DataNode y genera evidencias del estado de sub-replicación.
 
----
+-bash 80_recovery_restore.sh: 
+    Reinicia la infraestructura caída y verifica que Hadoop recupere la integridad de los bloques.
 
-## Normas de entrega (individual)
-Consulta `docs/entrega.md`.  
-**Obligatorio:** tag final `v1.0-entrega`.
+------------------------------------------------------------------------
 
----
+# 🛡 Características Técnicas
 
-## Nota
-Este repositorio es un “starter kit”: algunos scripts contienen **TODOs** para completar el proyecto.
+-   Uso de variables dinámicas (DT)
+-   Idempotencia (-mkdir -p, -put -f)
+-   Evidencias almacenadas en HDFS
+-   Auditoría automatizada
+-   Simulación realista de incidente
+-   Validación post-recuperación
+
+------------------------------------------------------------------------
